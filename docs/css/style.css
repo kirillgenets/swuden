@@ -37,7 +37,7 @@ HEADER
   background: linear-gradient(180deg, #24232F 0%, rgba(36, 35, 47, 0.38) 100%), url(../img/bg-image.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 100%; }
 
 /*HEADING*/
 .header__heading {
