@@ -31,6 +31,9 @@ a {
 HEADER
 *****/
 .header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#24232F), to(rgba(36, 35, 47, 0.38))), url(../img/bg-image.png);
+  background: -webkit-linear-gradient(top, #24232F 0%, rgba(36, 35, 47, 0.38) 100%), url(../img/bg-image.png);
+  background: -o-linear-gradient(top, #24232F 0%, rgba(36, 35, 47, 0.38) 100%), url(../img/bg-image.png);
   background: linear-gradient(180deg, #24232F 0%, rgba(36, 35, 47, 0.38) 100%), url(../img/bg-image.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,10 +41,19 @@ HEADER
 
 /*HEADING*/
 .header__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 30px 50px 0 50px; }
 
 .header__logo {
@@ -50,13 +62,20 @@ HEADER
   color: #fff;
   font-size: 24px;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s; }
 
 .header__logo:hover {
   color: #FDE259; }
 
 .header__nav {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .header__nav-item {
@@ -66,6 +85,8 @@ HEADER
   text-transform: uppercase;
   padding: 6px;
   border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s; }
 
 .header__nav-item:first-child {
@@ -121,7 +142,8 @@ HEADER
     margin-right: 30px; }
 
   .header__heading {
-    flex-wrap: wrap; } }
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
 @media screen and (max-width: 740px) {
   .header__title {
     margin-top: 30px; }
@@ -131,8 +153,11 @@ HEADER
 
   .header__nav {
     width: 100%;
-    justify-content: space-around;
-    order: 1; }
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
 
   .header__nav-item:first-child {
     margin-right: 0; } }
@@ -161,5 +186,3 @@ HEADER
   .header__line {
     width: 200px;
     height: 2px; } }
-
-/*# sourceMappingURL=style.css.map */
