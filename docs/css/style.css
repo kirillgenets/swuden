@@ -322,7 +322,11 @@ GALLERY
 .footer__text {
   color: #FDE259;
   font-size: 24px;
-  max-width: 300px; }
+  max-width: 300px;
+  transition: 0.3s; }
+
+.footer__website .footer__text:hover {
+  color: #fff; }
 
 /*RESPONSIVE*/
 @media screen and (max-width: 1180px) {
